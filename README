@@ -1,0 +1,34 @@
+
+You should notice two sub-directories: C and Java.  Each contains a serial
+implementation of matrix multiplication.  As we saw in class, matrix
+multiplcation is very easy to parallelize.  Your assignment is to parallelize
+one of these implementations.
+
+Right now, the programs compute a product and verify the answer.  Assuming that
+the answer is correct, it prints the time taken to reach the answer.  You need
+to modify the program so that it takes a command line option that specifies the
+number of threads to use.  The following, for example, will use eight threads to
+compute the answer:
+
+  $java Matrix 8
+
+or
+
+  $./matrix 8
+
+You should see a reasonable speed up as you increase the number of threads.
+This, of course, does not continue indefinitely and you are limited by the
+number of physical processors on your machine.
+
+Pts  Why
+---  -----
+ 3   Parallel matrix multiplication with a fixed number of threads.
+ 2   Variable number of threads
+ 2   Threads are properly joined
+ 3   Style (e.g., comments, variable names, etc.)
+
+
+Note: If you convert both the C and the Java programs, I will "return" one point
+to the score.  Think of it as one point of "extra credit", but you cannot get 11
+points on this question.  
+
